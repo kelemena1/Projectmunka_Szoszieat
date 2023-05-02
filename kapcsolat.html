@@ -76,100 +76,116 @@
       border-radius: 100%;
       margin-top: 20px;
     }
-    a{
+
+    a {
       color: white;
       text-decoration: none;
       padding-right: 50px;
     }
-    .menusor{
+
+    .menusor {
       color: white;
       font-size: 30px;
-      padding:10px;
+      padding: 10px;
       padding-right: 20px;
-      margin:10px
-      
+      margin: 10px
     }
-
   </style>
 </head>
 
 <body>
   <div class="container">
-    <div class="row">
-      <header>
-        <nav>
-          <ul class="menusor">
-            <a href="#">Főoldal</a>
-            <a href="#">Rólunk</a>
-            <a href="#">Kapcsolat</a>
-            <a href="#">Szolgáltatások</a>
-          </ul>
-        </nav>
-      </header>
+    <!--Header div kezdete-->
+    <div class="col-8">
+
+      <div class="row">
+        <header>
+          <nav>
+            <!--Menüsor-->
+            <ul class="menusor">
+              <a href="#">Főoldal</a>
+              <a href="#">Rólunk</a>
+              <a href="#">Kapcsolat</a>
+              <a href="#">Szolgáltatások</a>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <!--Tartalmazó div sor kezdete-->
+      <div class="row">
+        <!--Form kezdete-->
+        <form id="kapcsolat">
+          <div class="card">
+            <div class="card-header">
+              <h2>Kapcsolat</h2>
+            </div>
+            <!--Vezetéknév-->
+            <div class="card-body">
+              <div class="card nev">
+                <div class="card-body">
+                  <div class="form-group">
+                    <p><label for="lastname">Vezetéknév:</label></p>
+                    <input type="text" id="firstname" name="name" required>
+                  </div>
+                </div>
+              </div>
+              <!--Keresztnév-->
+              <div class="card nev">
+                <div class="card-body">
+                  <div class="form-group">
+                    <p><label for="firstname">Keresztnév:</label></p>
+                    <input type="text" id="lastname" name="name" required>
+                  </div>
+                </div>
+              </div>
+              <!--Email-->
+              <div class="card email">
+                <div class="card-body">
+                  <div class="form-group">
+                    <p><label for="email">E-mail cím:</label></p>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                </div>
+              </div>
+              <!--Üzenet tárgya-->
+              <div class="card targy">
+                <div class="card-body">
+                  <div class="form-group">
+                    <p><label for="subject">Üzenet tárgya:</label></p>
+                    <select name="subject" id="subject" class="form-control">
+                      <option value="feedback">Visszajelzés</option>
+                      <option value="complaint">Panasz</option>
+                      <option value="warrantity">Garancia</option>
+                      <option value="general_information">Általános információ</option>
+                      <option value="other">Egyéb</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!--Üzenet-->
+              <div class="card uzenet">
+                <div class="card-body">
+                  <div class="form-group">
+                    <p><label for="message">Üzenet:</label></p>
+                    <textarea id="message" name="message" class="form-control" required
+                      style="width: 100%; height: 25%; border:thick;"></textarea>
+                  </div>
+                </div>
+              </div>
+              <!--Küldés-->
+              <div class="col">
+                <input type="submit" value="Küldés" class="gomb">
+              </div>
+
+            </div>
+          </div>
+        </form>
+
+      </div>
     </div>
-    <div class="row">
+    <div class="col-4">
 
-
-      <form id="kapcsolat">
-        <div class="card">
-          <div class="card-header">
-            <h2>Kapcsolat</h2>
-          </div>
-          <div class="card-body">
-            <div class="card nev">
-              <div class="card-body">
-                <div class="form-group">
-                  <p><label for="lastname">Vezetéknév:</label></p>
-                  <input type="text" id="firstname" name="name" required>
-                </div>
-              </div>
-            </div>
-            <div class="card nev">
-              <div class="card-body">
-                <div class="form-group">
-                  <p><label for="firstname">Keresztnév:</label></p>
-                  <input type="text" id="lastname" name="name" required>
-                </div>
-              </div>
-            </div>
-            <div class="card email">
-              <div class="card-body">
-                <div class="form-group">
-                  <p><label for="email">E-mail cím:</label></p>
-                  <input type="email" id="email" name="email" required>
-                </div>
-              </div>
-            </div>
-            <div class="card targy">
-              <div class="card-body">
-                <div class="form-group">
-                  <p><label for="subject">Üzenet tárgya:</label></p>
-                  <select name="subject" id="subject" class="form-control">
-                    <option value="feedback">Visszajelzés</option>
-                    <option value="complaint">Panasz</option>
-                    <option value="warrantity">Garancia</option>
-                    <option value="general_information">Általános információ</option>
-                    <option value="other">Egyéb</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="card uzenet">
-              <div class="card-body">
-                <div class="form-group">
-                  <p><label for="message">Üzenet:</label></p>
-                  <textarea id="message" name="message" class="form-control" required
-                    style="width: 100%; height: 25%; border:thick;"></textarea>
-                </div>
-              </div>
-            </div>
-            <!--Küldés-->
-            <div class="col">
-              <input type="submit" value="Küldés" class="gomb">
-            </div>
-          </div>
-        </div>
-      </form>
     </div>
   </div>
   </div>
