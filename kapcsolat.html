@@ -229,25 +229,84 @@
             background-image: url('img/linkedIn.png');
             background-size: cover;
         }
+
+        .dropdown-menu li {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: -7px;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Kapcsolat</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">kapcsolat</a>
-                    <a class="nav-link" href="rolunk.html">Rólunk</a>
+    <header style="background-color: transparent;">
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-secondary" id="headerNav">
+            <div class="container-fluid">
+                <a class="navbar-brand d-block d-lg-none" href="#">
+                    <img src="img/team.png" height="80" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 active" aria-current="page" href="#">Főoldal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="testrolunk.html">Rólunk</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link mx-2" href="#">
+                                <img src="img/team.png" height="80" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="kapcsolat.html">Elérhetőség</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Termékek
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#"> Ruhák &raquo; </a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Női</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Férfi</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Cipők</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-
+        </nav>
+    </header>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-md-6 p-1">
