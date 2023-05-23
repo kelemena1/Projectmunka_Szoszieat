@@ -12,108 +12,202 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="aboutus.css">
+    <style>
+        .dropdown-menu li {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: -7px;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
+    </style>
 </head>
 
-<body style="background-image: url(img/hatter.jpg);">
-    <header style="background-color: white;">
-
-        <nav class="navbar navbar-expand-lg bg-light">
+<body>
+    <header style="background-color: transparent;">
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-secondary" id="headerNav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Kapcsolat</a>
+                <a class="navbar-brand d-block d-lg-none" href="#">
+                    <img src="img/team.png" height="80" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="kapcsolat.html">kapcsolat</a>
-                        <a class="nav-link" href="rolunk.html">Rólunk</a>
-                    </div>
+
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2 active" aria-current="page" href="#">Főoldal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="testrolunk.html">Rólunk</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link mx-2" href="#">
+                                <img src="img/team.png" height="80" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="kapcsolat.html">Elérhetőség</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Termékek
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#"> Ruhák &raquo; </a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Női</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">Férfi</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Cipők</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <br>
-    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">A csapatról</h1>
-    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">(Szöszi és a többiek)</h1>
-    <div class="container" style="margin: auto;">
-        <div class="row">
-            <div class="col-10" style="margin: auto; padding-left: 50px;">
-                <div class="card" style="width: 18rem; border: 2px solid black;">
-                    <div class="card-header" style="background-color: gray;">
-                        <h3 class="card-text" style="text-align: center;">Kelemen Ádám (Eric Cartman)</h3>
+    <h1 id="felirat">Szöszi és a többiek</h1>
+    <div class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about-img">
+                        <img src="img/ado.jpg" alt="">
                     </div>
-                    <img class="card-img-top" src="img/112940658.jpg" alt="Card image cap">
                 </div>
-                <div class="col-2">
-                    <p class="card-text">Egy igazi ikon akire csak felnézni lehet! Vastagcsontozatú!</p>
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="about-text">
+                        <h2>Kelemen Ádám</h2>
+                        <p>Egy igazi ikon akire csak felnézni lehet! Vastagcsontozatú!</p>
+                        <p>Betöltött szerepe:</p>
+                        <ul>
+                            <li>Az elérhetőség oldal javascript részének megírása.</li>
+                            <li>A navbarban található south park logo elkészítése.</li>
+                            <li>Mindkét oldal átnézése és finomítgatása.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-10" style="margin: auto; padding-left: 50px;">
-                <div class="card" style="width: 18rem; border: 2px solid black;">
-                    <div class="card-header" style="background-color: gray;">
-                        <h3 class="card-text" style="text-align: center;">Juhász Balázs (Szöszi)</h3>
+
+
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="about-text">
+                        <h2>Juhász Balázs</h2>
+                        <p>Mindig segít mindenkinek amiben csak tud! Nyugodt természetű!</p>
+                        <p>Betöltött szerepe:</p>
+                        <ul>
+                            <li>A rólunk oldal alapjának fellépítése.</li>
+                            <li>A rólunk oldal dokumentációjának megírása.</li>
+                            <li>A rólunk oldal vázszerkezetének elkészítése.</li>
+                        </ul>
                     </div>
-                    <img class="card-img-top" src="img/intro-1678233081.jpg" alt="Card image cap">
+
                 </div>
-                <div class="col-2">
-                    <p class="card-text">Mindig segít mindenkinek amiben csak tud! Nyugodt természetű!</p>
+                <div class="col-lg-4 col-lg-offset-1">
+                    <div class="about-img">
+                        <img src="img/szoszi.png" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-10" style="margin: auto; padding-left: 50px;">
-                <div class="card" style="width: 18rem; border: 2px solid black;">
-                    <div class="card-header" style="background-color: gray;">
-                        <h3 class="card-text" style="text-align: center;">Dimény Soma Dominik (Terminátor)</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about-img">
+                        <img src="img/somco.jpg" alt="">
                     </div>
-                    <img class="card-img-top" src="img/112940574.jpg" alt="Card image cap">
                 </div>
-                <div class="col-2">
-                    <p class="card-text">A jövőből érkezett, hogy megoldja a feladatát amit kiadtak neki! Megértő
-                        személyiség!</p>
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="about-text">
+                        <h2>Dimény Soma Dominik</h2>
+                        <p>A jövőből érkezett, hogy megoldja a feladatát amit kiadtak neki! Megértő
+                            személyiség!</p>
+                        <p>Betöltött szerepe:</p>
+                        <ul>
+                            <li>Az elérhetőség oldal alapjának fellépítése.</li>
+                            <li>Az elérhetőség oldal dokumentációjának megírása.</li>
+                            <li>Az elérhetőség oldal vázszerkezetének elkészítése.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <div style="background-color: cyan; border: 1px solid black;">
+                <h1 style="text-align: center;">A weboldalról</h1>
+                <p style="padding-left: 20px;">Ez egy ruha webáruház amiben a legjobb minőségű női, férfi ruhákat és cipőket lehet megvásárolni.</p>
+                <p style="padding-left: 20px;">Szenvedélyünknek élve összehoztuk ezt a webáruházat, hogy segítsünk megtalálni az ideális ruhákat stílusához és személyiségéhez illően.</p>
+                <p style="padding-left: 20px;">A rólunk oldal bemutatja a fejlesztőket, hogy ki mit csinált a weboldalon.</p>
+                <p style="padding-left: 20px;">Az oldal többi részén a ruhák meg a cipők találhatóak. Kivéve az elérhetőségek.</p>
+            </div>
         </div>
-        <br>
-        <div style="padding: 20px;background-color: gray; border: 2px solid black; width: 100%;">
-            <h1 style="text-align: center;">Leírás</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae aliquam odio. Minima ratione
-                reprehenderit dicta amet, voluptatem ipsam corporis, iusto itaque sed culpa, modi rem accusantium?
-                Assumenda beatae consectetur minima rerum reprehenderit facere quasi laborum veritatis, voluptatem
-                doloribus alias quis modi asperiores deserunt quos, sapiente eos sint libero? Corrupti?
-            </p>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus sapiente iure ipsa itaque quas, illum
-                assumenda nobis ratione corrupti error numquam suscipit odio voluptates autem placeat provident, dolore
-                accusantium unde sequi eius? Iusto soluta, aliquid dignissimos dolore placeat quo officiis culpa amet
-                rem consequatur totam labore? Adipisci vitae sunt et iste officiis doloribus est dolores nam! Ipsa,
-                suscipit esse perferendis enim ad autem vitae aliquid hic minus impedit fuga repellat magni distinctio
-                voluptate veritatis dolorem. Placeat repellat odit ut vel impedit, libero eos error eligendi numquam,
-                non a molestias aperiam, soluta consectetur ad dolore quibusdam quae aliquam blanditiis corporis ipsa.
-            </p>
-        </div>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>Rólunk</h6>
+                        <p class="text-justify">Ez egy nagyon jó webaruház hidd el, szép és jó dolgok kaphatóak</p>
+                    </div>
+
+
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Gyors Linkek</h6>
+                        <ul class="footer-links">
+                            <a class="nav-link" href="rolunk.html">Rólunk</a>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2023 Minden jog fenntartva
+                            <a href="#">Szöszi és a többiek</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="https://www.southparkstudios.com/"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li><a class="instagram" href="https://www.southparkstudios.com/"><i
+                                        class="fa fa-instagram"></i></a></li>
+                            <li><a class="twitter" href="https://www.southparkstudios.com/"><i
+                                        class="fa fa-twitter"></i></a></li>
+                            <li><a class="linkedin" href="https://www.southparkstudios.com/"><i
+                                        class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    <br>
-    <br>
-    <footer style="background-color: white;">
-        <br>
-        <div style="text-align: center;">
-            <h2 style="font-family: Arial, Helvetica, sans-serif;">Elérhetőségek</h2>
-            <br>
-            <p style="font-weight: bolder;">Email-cím: kelemenadam@gmail.com</p>
-            <p>Telefonszám: 062012345678</p>
-            <br>
-            <p style="font-weight: bolder;">Email-cím: juhaszbalazs@gmail.com</p>
-            <p>Telefonszám: 063098765432</p>
-            <br>
-            <p style="font-weight: bolder;">Email-cím: dimenysoma@gmail.com</p>
-            <p>Telefonszám: 067014725836</p>
-        </div>
-    </footer>
+
 </body>
 
 </html>
